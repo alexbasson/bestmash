@@ -10,6 +10,10 @@
 	<string>BestMash</string>
 	<key>IDESourceControlProjectOriginsDictionary</key>
 	<dict>
+		<key>0E3E48B5-0ECA-447A-80D5-A69A40E1C13A</key>
+		<string>ssh://github.com/pivotal/PivotalCoreKit.git</string>
+		<key>702E24F5-95DA-460C-8101-A403880FF822</key>
+		<string>git://github.com/pivotal/cedar.git</string>
 		<key>FF499B78-A5C9-4CF9-A1B0-B5FEA8F55CF5</key>
 		<string>ssh://github.com/alexbasson/bestmash.git</string>
 	</dict>
@@ -17,6 +21,10 @@
 	<string>BestMash/BestMash.xcodeproj/project.xcworkspace</string>
 	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
 	<dict>
+		<key>0E3E48B5-0ECA-447A-80D5-A69A40E1C13A</key>
+		<string>../../Externals/PivotalCoreKit</string>
+		<key>702E24F5-95DA-460C-8101-A403880FF822</key>
+		<string>../../Externals/cedar</string>
 		<key>FF499B78-A5C9-4CF9-A1B0-B5FEA8F55CF5</key>
 		<string>../../..</string>
 	</dict>
@@ -35,6 +43,22 @@
 			<string>FF499B78-A5C9-4CF9-A1B0-B5FEA8F55CF5</string>
 			<key>IDESourceControlWCCName</key>
 			<string>bestmash</string>
+		</dict>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>702E24F5-95DA-460C-8101-A403880FF822</string>
+			<key>IDESourceControlWCCName</key>
+			<string>cedar</string>
+		</dict>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>0E3E48B5-0ECA-447A-80D5-A69A40E1C13A</string>
+			<key>IDESourceControlWCCName</key>
+			<string>PivotalCoreKit</string>
 		</dict>
 	</array>
 </dict>
