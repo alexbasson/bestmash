@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
+	<false/>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>23FB0013-DFE7-4299-B7DC-5116CA06DBA8</string>
+	<key>IDESourceControlProjectName</key>
+	<string>BestMash</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>FF499B78-A5C9-4CF9-A1B0-B5FEA8F55CF5</key>
+		<string>ssh://github.com/alexbasson/bestmash.git</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>BestMash/BestMash.xcodeproj/project.xcworkspace</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>FF499B78-A5C9-4CF9-A1B0-B5FEA8F55CF5</key>
+		<string>../../..</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>ssh://github.com/alexbasson/bestmash.git</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>110</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>FF499B78-A5C9-4CF9-A1B0-B5FEA8F55CF5</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>FF499B78-A5C9-4CF9-A1B0-B5FEA8F55CF5</string>
+			<key>IDESourceControlWCCName</key>
+			<string>bestmash</string>
+		</dict>
+	</array>
+</dict>
+</plist>
