@@ -29,6 +29,12 @@
 		AE3F269418F748BD0057B249 /* ProductsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AE3F269318F748BD0057B249 /* ProductsViewController.m */; };
 		AE3F269718F749590057B249 /* ProductsViewControllerSpec.mm in Sources */ = {isa = PBXBuildFile; fileRef = AE3F269618F749590057B249 /* ProductsViewControllerSpec.mm */; };
 		AE3F269B18F74B740057B249 /* ProductCell.m in Sources */ = {isa = PBXBuildFile; fileRef = AE3F269A18F74B740057B249 /* ProductCell.m */; };
+		AEFF375F18FD6C6B002DA993 /* Fixtures in Resources */ = {isa = PBXBuildFile; fileRef = AEFF375E18FD6C6B002DA993 /* Fixtures */; };
+		AEFF377718FD78EB002DA993 /* FixtureHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = AEFF377618FD78EB002DA993 /* FixtureHelper.m */; };
+		AEFF377918FD81CD002DA993 /* libxml2.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = AEFF377818FD81CD002DA993 /* libxml2.dylib */; };
+		AEFF377B18FD8467002DA993 /* Production.plist in Resources */ = {isa = PBXBuildFile; fileRef = AEFF377A18FD8467002DA993 /* Production.plist */; };
+		AEFF377F18FD87C8002DA993 /* ProductsAPIClient.m in Sources */ = {isa = PBXBuildFile; fileRef = AEFF377E18FD87C8002DA993 /* ProductsAPIClient.m */; };
+		AEFF378218FD880B002DA993 /* ProductsAPIClientSpec.mm in Sources */ = {isa = PBXBuildFile; fileRef = AEFF378118FD880B002DA993 /* ProductsAPIClientSpec.mm */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -258,6 +264,14 @@
 		AE3F269618F749590057B249 /* ProductsViewControllerSpec.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = ProductsViewControllerSpec.mm; sourceTree = "<group>"; };
 		AE3F269918F74B740057B249 /* ProductCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ProductCell.h; sourceTree = "<group>"; };
 		AE3F269A18F74B740057B249 /* ProductCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ProductCell.m; sourceTree = "<group>"; };
+		AEFF375E18FD6C6B002DA993 /* Fixtures */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Fixtures; sourceTree = "<group>"; };
+		AEFF377518FD78EB002DA993 /* FixtureHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FixtureHelper.h; sourceTree = "<group>"; };
+		AEFF377618FD78EB002DA993 /* FixtureHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FixtureHelper.m; sourceTree = "<group>"; };
+		AEFF377818FD81CD002DA993 /* libxml2.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libxml2.dylib; path = usr/lib/libxml2.dylib; sourceTree = SDKROOT; };
+		AEFF377A18FD8467002DA993 /* Production.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Production.plist; sourceTree = "<group>"; };
+		AEFF377D18FD87C8002DA993 /* ProductsAPIClient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ProductsAPIClient.h; sourceTree = "<group>"; };
+		AEFF377E18FD87C8002DA993 /* ProductsAPIClient.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ProductsAPIClient.m; sourceTree = "<group>"; };
+		AEFF378118FD880B002DA993 /* ProductsAPIClientSpec.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = ProductsAPIClientSpec.mm; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -265,6 +279,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AEFF377918FD81CD002DA993 /* libxml2.dylib in Frameworks */,
 				AE3F268D18F7465F0057B249 /* libFoundation+PivotalCore-StaticLib.a in Frameworks */,
 				AE3F268E18F7465F0057B249 /* libUIKit+PivotalCore-StaticLib.a in Frameworks */,
 				AE3F25C118F743A20057B249 /* CoreGraphics.framework in Frameworks */,
@@ -314,6 +329,7 @@
 		AE3F25BD18F743A20057B249 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				AEFF377818FD81CD002DA993 /* libxml2.dylib */,
 				AE3F264918F745AE0057B249 /* SenTestingKit.framework */,
 				AE3F25BE18F743A20057B249 /* Foundation.framework */,
 				AE3F25C018F743A20057B249 /* CoreGraphics.framework */,
@@ -326,6 +342,7 @@
 		AE3F25C418F743A20057B249 /* BestMash */ = {
 			isa = PBXGroup;
 			children = (
+				AEFF377C18FD873F002DA993 /* API Clients */,
 				AE3F269818F74B3A0057B249 /* Views */,
 				AE3F269118F7489E0057B249 /* Controllers */,
 				AE3F25CD18F743A20057B249 /* AppDelegate.h */,
@@ -343,6 +360,7 @@
 				AE3F25C718F743A20057B249 /* InfoPlist.strings */,
 				AE3F25CA18F743A20057B249 /* main.m */,
 				AE3F25CC18F743A20057B249 /* BestMash-Prefix.pch */,
+				AEFF377A18FD8467002DA993 /* Production.plist */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -377,6 +395,9 @@
 		AE3F263718F7454C0057B249 /* Specs */ = {
 			isa = PBXGroup;
 			children = (
+				AEFF378018FD87DD002DA993 /* API Clients */,
+				AEFF377418FD787B002DA993 /* SpecHelpers */,
+				AEFF375E18FD6C6B002DA993 /* Fixtures */,
 				AE3F268F18F747E20057B249 /* AppDelegateSpec.mm */,
 				AE3F269518F7493C0057B249 /* Controllers */,
 				AE3F263F18F7454C0057B249 /* Rakefile */,
@@ -445,6 +466,32 @@
 				AE3F269A18F74B740057B249 /* ProductCell.m */,
 			);
 			path = Views;
+			sourceTree = "<group>";
+		};
+		AEFF377418FD787B002DA993 /* SpecHelpers */ = {
+			isa = PBXGroup;
+			children = (
+				AEFF377518FD78EB002DA993 /* FixtureHelper.h */,
+				AEFF377618FD78EB002DA993 /* FixtureHelper.m */,
+			);
+			path = SpecHelpers;
+			sourceTree = "<group>";
+		};
+		AEFF377C18FD873F002DA993 /* API Clients */ = {
+			isa = PBXGroup;
+			children = (
+				AEFF377D18FD87C8002DA993 /* ProductsAPIClient.h */,
+				AEFF377E18FD87C8002DA993 /* ProductsAPIClient.m */,
+			);
+			path = "API Clients";
+			sourceTree = "<group>";
+		};
+		AEFF378018FD87DD002DA993 /* API Clients */ = {
+			isa = PBXGroup;
+			children = (
+				AEFF378118FD880B002DA993 /* ProductsAPIClientSpec.mm */,
+			);
+			path = "API Clients";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -694,6 +741,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AEFF377B18FD8467002DA993 /* Production.plist in Resources */,
 				AE3F25C918F743A20057B249 /* InfoPlist.strings in Resources */,
 				AE3F25D118F743A20057B249 /* Images.xcassets in Resources */,
 			);
@@ -703,6 +751,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AEFF375F18FD6C6B002DA993 /* Fixtures in Resources */,
 				AE3F263C18F7454C0057B249 /* InfoPlist.strings in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -731,6 +780,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				AE3F25CF18F743A20057B249 /* AppDelegate.m in Sources */,
+				AEFF377F18FD87C8002DA993 /* ProductsAPIClient.m in Sources */,
 				AE3F269B18F74B740057B249 /* ProductCell.m in Sources */,
 				AE3F269418F748BD0057B249 /* ProductsViewController.m in Sources */,
 				AE3F25CB18F743A20057B249 /* main.m in Sources */,
@@ -741,8 +791,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AEFF378218FD880B002DA993 /* ProductsAPIClientSpec.mm in Sources */,
 				AE3F269018F747E20057B249 /* AppDelegateSpec.mm in Sources */,
 				AE3F269718F749590057B249 /* ProductsViewControllerSpec.mm in Sources */,
+				AEFF377718FD78EB002DA993 /* FixtureHelper.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -891,6 +943,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "BestMash/BestMash-Prefix.pch";
 				INFOPLIST_FILE = "BestMash/BestMash-Info.plist";
+				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};
@@ -904,6 +957,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "BestMash/BestMash-Prefix.pch";
 				INFOPLIST_FILE = "BestMash/BestMash-Info.plist";
+				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};
@@ -922,10 +976,7 @@
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Specs/Specs-Prefix.pch";
-				GCC_PREPROCESSOR_DEFINITIONS = (
-					"DEBUG=1",
-					"$(inherited)",
-				);
+				GCC_PREPROCESSOR_DEFINITIONS = "DEBUG=1";
 				HEADER_SEARCH_PATHS = (
 					"$(inherited)",
 					/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include,
@@ -958,6 +1009,7 @@
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Specs/Specs-Prefix.pch";
+				GCC_PREPROCESSOR_DEFINITIONS = "";
 				HEADER_SEARCH_PATHS = (
 					"$(inherited)",
 					/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include,
@@ -1005,6 +1057,7 @@
 				AE3F264518F7454C0057B249 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

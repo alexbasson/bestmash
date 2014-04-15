@@ -14,6 +14,8 @@
 		<string>ssh://github.com/pivotal/PivotalCoreKit.git</string>
 		<key>702E24F5-95DA-460C-8101-A403880FF822</key>
 		<string>git://github.com/pivotal/cedar.git</string>
+		<key>8DF2F242-4184-4C4F-B64E-4DBA01093817</key>
+		<string>https://github.com/akitchen/FakeHTTP.git</string>
 		<key>FF499B78-A5C9-4CF9-A1B0-B5FEA8F55CF5</key>
 		<string>ssh://github.com/alexbasson/bestmash.git</string>
 	</dict>
@@ -25,6 +27,8 @@
 		<string>../../Externals/PivotalCoreKit</string>
 		<key>702E24F5-95DA-460C-8101-A403880FF822</key>
 		<string>../../Externals/cedar</string>
+		<key>8DF2F242-4184-4C4F-B64E-4DBA01093817</key>
+		<string>../../Externals/PivotalCoreKit/Externals/FakeHTTP</string>
 		<key>FF499B78-A5C9-4CF9-A1B0-B5FEA8F55CF5</key>
 		<string>../../..</string>
 	</dict>
@@ -51,6 +55,14 @@
 			<string>702E24F5-95DA-460C-8101-A403880FF822</string>
 			<key>IDESourceControlWCCName</key>
 			<string>cedar</string>
+		</dict>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>8DF2F242-4184-4C4F-B64E-4DBA01093817</string>
+			<key>IDESourceControlWCCName</key>
+			<string>FakeHTTP</string>
 		</dict>
 		<dict>
 			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>

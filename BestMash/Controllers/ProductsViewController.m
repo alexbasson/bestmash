@@ -1,5 +1,6 @@
 #import "ProductsViewController.h"
 #import "ProductCell.h"
+#import "ProductsAPIClient.h"
 
 @interface ProductsViewController () <UITableViewDataSource>
 
@@ -13,7 +14,11 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
 
-    self.products = @[@"! (Bonus Track) (Japan) - CD"];
+    ProductsAPIClient *apiClient = [[ProductsAPIClient alloc] init];
+    [apiClient fetchProductsWithCompletion:^(NSArray *products, NSError *error) {
+        self.products = products;
+        [self.tableView reloadData];
+    }];
     self.tableView = [[UITableView alloc] initWithFrame:self.view.bounds];
     self.tableView.dataSource = self;
     [self.tableView registerClass:[ProductCell class] forCellReuseIdentifier:@"ProductCell"];

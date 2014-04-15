@@ -1,5 +1,4 @@
-#import "ProductsViewController.h"
-#import "ProductCell.h"
+#import "ProductsAPIClient.h"
 #import "NSURLConnection+Spec.h"
 #import "PSHKFakeResponses.h"
 #import "PSHKFakeHTTPURLResponse.h"
@@ -7,25 +6,28 @@
 using namespace Cedar::Matchers;
 using namespace Cedar::Doubles;
 
-SPEC_BEGIN(ProductsViewControllerSpec)
+SPEC_BEGIN(ProductsAPIClientSpec)
 
-describe(@"ProductsViewController", ^{
-    __block ProductsViewController *controller;
+describe(@"ProductsAPIClient", ^{
+    __block ProductsAPIClient *client;
 
     beforeEach(^{
-        controller = [[ProductsViewController alloc] init];
-        controller.view should_not be_nil;
-        [controller.tableView layoutIfNeeded];
+        client = [[ProductsAPIClient alloc] init];
     });
 
-    describe(@"when the view loads", ^{
+    describe(@"fetching products", ^{
         __block NSURLConnection *connection;
+        __block NSArray *returnedProducts;
 
         beforeEach(^{
+            returnedProducts = nil;
+            [client fetchProductsWithCompletion:^(NSArray *products, NSError *error){
+                returnedProducts = products;
+            }];
             connection = [[NSURLConnection connections] lastObject];
         });
 
-        it(@"should make a network request", ^{
+        it(@"should make a network connection with the appropriate request url", ^{
             connection.request.URL.absoluteString should equal(@"http://api.remix.bestbuy.com/v1/products?apiKey=a6xexy2znvn29m9mjfzfkhp5&format=json");
         });
 
@@ -43,9 +45,8 @@ describe(@"ProductsViewController", ^{
                 [connection receiveResponse:response];
             });
 
-            it(@"should show a table view with products", ^{
-                ProductCell *cell = controller.tableView.visibleCells.firstObject;
-                cell.productNameLabel.text should equal(@"! (Bonus Track) (Japan) - CD");
+            it(@"should call the completion handler with the products", ^{
+                returnedProducts should equal(@[@"! (Bonus Track) (Japan) - CD"]);
             });
         });
     });
