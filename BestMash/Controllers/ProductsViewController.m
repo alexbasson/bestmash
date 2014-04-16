@@ -27,6 +27,8 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
 
+    self.title = @"Products";
+
     [self.apiClient fetchProductsWithCompletion:^(NSArray *products, NSError *error) {
         self.products = products;
         [self.tableView reloadData];

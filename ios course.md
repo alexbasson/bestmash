@@ -23,5 +23,10 @@ Structure: Following the [iOS Bootcamp](https://docs.google.com/a/pivotallabs.co
 
 
 ## Day 3
+
+### In class:
  - Refactor controller code and tests to use dependency injection and fakes
- - Show product image and creation time in table view
+ - Introduce Product model object
+
+### HW:
+ - Display the regular price in the table view.
