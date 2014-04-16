@@ -1,6 +1,7 @@
 #import "ProductsViewController.h"
 #import "ProductCell.h"
 #import "ProductsAPIClient.h"
+#import "Product.h"
 
 @interface ProductsViewController () <UITableViewDataSource>
 
@@ -43,8 +44,16 @@
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
+    Product *product = self.products[indexPath.row];
+
     ProductCell *cell = (ProductCell *)[tableView dequeueReusableCellWithIdentifier:@"ProductCell" forIndexPath:indexPath];
-    cell.productNameLabel.text = self.products[indexPath.row];
+    cell.productNameLabel.text = product.name;
+    NSURLRequest *requst = [NSURLRequest requestWithURL:product.thumbnailURL];
+    [NSURLConnection sendAsynchronousRequest:requst
+                                       queue:[NSOperationQueue mainQueue]
+                           completionHandler:^(NSURLResponse *response, NSData *data, NSError *connectionError) {
+                               cell.productImageView.image = [UIImage imageWithData:data];
+                           }];
     return cell;
 }
 

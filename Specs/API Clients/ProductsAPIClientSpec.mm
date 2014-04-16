@@ -1,4 +1,5 @@
 #import "ProductsAPIClient.h"
+#import "Product.h"
 
 using namespace Cedar::Matchers;
 using namespace Cedar::Doubles;
@@ -43,7 +44,11 @@ describe(@"ProductsAPIClient", ^{
             });
 
             it(@"should call the completion handler with the products", ^{
-                returnedProducts should equal(@[@"! (Bonus Track) (Japan) - CD"]);
+                NSDictionary *dict = @{@"name": @"! (Bonus Track) (Japan) - CD",
+                                       @"thumbnailImage": @"http://images.bestbuy.com/BestBuy_US/images/products/nonsku/default_music_s.jpg"
+                                       };
+                Product *product = [Product productWithAttributes:dict];
+                returnedProducts should equal(@[product]);
             });
         });
     });

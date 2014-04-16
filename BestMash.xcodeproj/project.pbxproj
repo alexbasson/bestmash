@@ -29,6 +29,9 @@
 		AE3F269418F748BD0057B249 /* ProductsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AE3F269318F748BD0057B249 /* ProductsViewController.m */; };
 		AE3F269718F749590057B249 /* ProductsViewControllerSpec.mm in Sources */ = {isa = PBXBuildFile; fileRef = AE3F269618F749590057B249 /* ProductsViewControllerSpec.mm */; };
 		AE3F269B18F74B740057B249 /* ProductCell.m in Sources */ = {isa = PBXBuildFile; fileRef = AE3F269A18F74B740057B249 /* ProductCell.m */; };
+		AE5F59D518FECE500013E2CA /* default_music_s.jpg in Resources */ = {isa = PBXBuildFile; fileRef = AE5F59D418FECE500013E2CA /* default_music_s.jpg */; };
+		AE5F59D918FED2830013E2CA /* Product.m in Sources */ = {isa = PBXBuildFile; fileRef = AE5F59D818FED2830013E2CA /* Product.m */; };
+		AE5F59DC18FED2FA0013E2CA /* ProductSpec.mm in Sources */ = {isa = PBXBuildFile; fileRef = AE5F59DB18FED2FA0013E2CA /* ProductSpec.mm */; };
 		AEFF375F18FD6C6B002DA993 /* Fixtures in Resources */ = {isa = PBXBuildFile; fileRef = AEFF375E18FD6C6B002DA993 /* Fixtures */; };
 		AEFF377718FD78EB002DA993 /* FixtureHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = AEFF377618FD78EB002DA993 /* FixtureHelper.m */; };
 		AEFF377918FD81CD002DA993 /* libxml2.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = AEFF377818FD81CD002DA993 /* libxml2.dylib */; };
@@ -264,6 +267,10 @@
 		AE3F269618F749590057B249 /* ProductsViewControllerSpec.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = ProductsViewControllerSpec.mm; sourceTree = "<group>"; };
 		AE3F269918F74B740057B249 /* ProductCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ProductCell.h; sourceTree = "<group>"; };
 		AE3F269A18F74B740057B249 /* ProductCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ProductCell.m; sourceTree = "<group>"; };
+		AE5F59D418FECE500013E2CA /* default_music_s.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = default_music_s.jpg; sourceTree = "<group>"; };
+		AE5F59D718FED2830013E2CA /* Product.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Product.h; sourceTree = "<group>"; };
+		AE5F59D818FED2830013E2CA /* Product.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Product.m; sourceTree = "<group>"; };
+		AE5F59DB18FED2FA0013E2CA /* ProductSpec.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = ProductSpec.mm; sourceTree = "<group>"; };
 		AEFF375E18FD6C6B002DA993 /* Fixtures */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Fixtures; sourceTree = "<group>"; };
 		AEFF377518FD78EB002DA993 /* FixtureHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FixtureHelper.h; sourceTree = "<group>"; };
 		AEFF377618FD78EB002DA993 /* FixtureHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FixtureHelper.m; sourceTree = "<group>"; };
@@ -342,6 +349,7 @@
 		AE3F25C418F743A20057B249 /* BestMash */ = {
 			isa = PBXGroup;
 			children = (
+				AE5F59D618FED26A0013E2CA /* Models */,
 				AEFF377C18FD873F002DA993 /* API Clients */,
 				AE3F269818F74B3A0057B249 /* Views */,
 				AE3F269118F7489E0057B249 /* Controllers */,
@@ -395,6 +403,8 @@
 		AE3F263718F7454C0057B249 /* Specs */ = {
 			isa = PBXGroup;
 			children = (
+				AE5F59DA18FED2E30013E2CA /* Models */,
+				AE5F59BF18FECE2A0013E2CA /* Resources */,
 				AEFF378018FD87DD002DA993 /* API Clients */,
 				AEFF377418FD787B002DA993 /* SpecHelpers */,
 				AEFF375E18FD6C6B002DA993 /* Fixtures */,
@@ -466,6 +476,31 @@
 				AE3F269A18F74B740057B249 /* ProductCell.m */,
 			);
 			path = Views;
+			sourceTree = "<group>";
+		};
+		AE5F59BF18FECE2A0013E2CA /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				AE5F59D418FECE500013E2CA /* default_music_s.jpg */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		AE5F59D618FED26A0013E2CA /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				AE5F59D718FED2830013E2CA /* Product.h */,
+				AE5F59D818FED2830013E2CA /* Product.m */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		AE5F59DA18FED2E30013E2CA /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				AE5F59DB18FED2FA0013E2CA /* ProductSpec.mm */,
+			);
+			path = Models;
 			sourceTree = "<group>";
 		};
 		AEFF377418FD787B002DA993 /* SpecHelpers */ = {
@@ -751,6 +786,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AE5F59D518FECE500013E2CA /* default_music_s.jpg in Resources */,
 				AEFF375F18FD6C6B002DA993 /* Fixtures in Resources */,
 				AE3F263C18F7454C0057B249 /* InfoPlist.strings in Resources */,
 			);
@@ -782,6 +818,7 @@
 				AE3F25CF18F743A20057B249 /* AppDelegate.m in Sources */,
 				AEFF377F18FD87C8002DA993 /* ProductsAPIClient.m in Sources */,
 				AE3F269B18F74B740057B249 /* ProductCell.m in Sources */,
+				AE5F59D918FED2830013E2CA /* Product.m in Sources */,
 				AE3F269418F748BD0057B249 /* ProductsViewController.m in Sources */,
 				AE3F25CB18F743A20057B249 /* main.m in Sources */,
 			);
@@ -793,6 +830,7 @@
 			files = (
 				AEFF378218FD880B002DA993 /* ProductsAPIClientSpec.mm in Sources */,
 				AE3F269018F747E20057B249 /* AppDelegateSpec.mm in Sources */,
+				AE5F59DC18FED2FA0013E2CA /* ProductSpec.mm in Sources */,
 				AE3F269718F749590057B249 /* ProductsViewControllerSpec.mm in Sources */,
 				AEFF377718FD78EB002DA993 /* FixtureHelper.m in Sources */,
 			);

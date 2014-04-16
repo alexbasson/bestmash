@@ -1,5 +1,5 @@
 #import "ProductsAPIClient.h"
-#import "NSDictionary+QueryString.h"
+#import "Product.h"
 
 @implementation ProductsAPIClient
 
@@ -14,7 +14,9 @@
                                        queue:[NSOperationQueue mainQueue]
                            completionHandler:^(NSURLResponse *response, NSData *data, NSError *connectionError) {
                                NSDictionary *jsonDict = [NSJSONSerialization JSONObjectWithData:data options:0 error:nil];
-                               NSArray *products = [jsonDict[@"products"] valueForKeyPath:@"name"];
+                               NSArray *products = [jsonDict[@"products"] collect:^Product *(NSDictionary *dict) {
+                                   return [[Product alloc] initWithDictionary:dict];
+                               }];
                                completion(products, nil);
                            }];
 }
