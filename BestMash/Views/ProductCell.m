@@ -18,7 +18,7 @@
 - (UILabel *)productNameLabel {
     if (!_productNameLabel) {
         _productNameLabel = [[UILabel alloc] initWithFrame:CGRectZero];
-        [self addSubview:_productNameLabel];
+        [self.contentView addSubview:_productNameLabel];
     }
     return _productNameLabel;
 }
@@ -26,7 +26,7 @@
 - (UIImageView *)productImageView {
     if (!_productImageView) {
         _productImageView = [[UIImageView alloc] initWithFrame:CGRectZero];
-        [self addSubview:_productImageView];
+        [self.contentView addSubview:_productImageView];
     }
     return _productImageView;
 }
