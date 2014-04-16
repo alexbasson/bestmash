@@ -1,7 +1,9 @@
 #import <Foundation/Foundation.h>
 
+typedef void(^FetchProductsCompletionBlock)(NSArray *products, NSError *error);
+
 @interface ProductsAPIClient : NSObject
 
-- (void)fetchProductsWithCompletion:(void(^)(NSArray *products, NSError *error))completion;
+- (void)fetchProductsWithCompletion:(FetchProductsCompletionBlock)completion;
 
 @end

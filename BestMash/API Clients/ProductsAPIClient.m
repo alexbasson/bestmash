@@ -3,7 +3,7 @@
 
 @implementation ProductsAPIClient
 
-- (void)fetchProductsWithCompletion:(void(^)(NSArray *products, NSError *error))completion {
+- (void)fetchProductsWithCompletion:(FetchProductsCompletionBlock)completion {
     NSDictionary *prodPList = [NSDictionary dictionaryWithContentsOfFile:[[NSBundle mainBundle] pathForResource:@"Production" ofType:@"plist"]];
     NSURLComponents *urlComponents = [[NSURLComponents alloc] initWithString:prodPList[@"API Root"]];
     urlComponents.path = [urlComponents.path stringByAppendingPathComponent:@"products"];

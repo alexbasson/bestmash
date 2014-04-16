@@ -6,16 +6,27 @@
 
 @property (nonatomic, strong) NSArray *products;
 @property (nonatomic, strong, readwrite) UITableView *tableView;
+@property (nonatomic, strong) ProductsAPIClient *apiClient;
 
 @end
 
 @implementation ProductsViewController
 
+- (instancetype)initWithAPIClient:(ProductsAPIClient *)apiClient {
+    if (self = [super init]) {
+        self.apiClient = apiClient;
+    }
+    return self;
+}
+
+- (instancetype)init {
+    return [self initWithAPIClient:[[ProductsAPIClient alloc] init]];
+}
+
 - (void)viewDidLoad {
     [super viewDidLoad];
 
-    ProductsAPIClient *apiClient = [[ProductsAPIClient alloc] init];
-    [apiClient fetchProductsWithCompletion:^(NSArray *products, NSError *error) {
+    [self.apiClient fetchProductsWithCompletion:^(NSArray *products, NSError *error) {
         self.products = products;
         [self.tableView reloadData];
     }];
