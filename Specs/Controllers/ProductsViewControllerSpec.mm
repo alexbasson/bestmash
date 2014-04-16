@@ -25,10 +25,11 @@ describe(@"ProductsViewController", ^{
     });
 
     describe(@"when the view loads", ^{
+        __block NSString *thumbnailPath;
         __block UIImage *thumbnailImage;
 
         beforeEach(^{
-            NSString *thumbnailPath = [[NSBundle bundleForClass:[self class]] pathForResource:@"default_music_s" ofType:@"jpg"];
+            thumbnailPath = [[NSBundle bundleForClass:[self class]] pathForResource:@"default_music_s" ofType:@"jpg"];
             thumbnailImage = [UIImage imageWithContentsOfFile:thumbnailPath];
         });
 
@@ -36,9 +37,18 @@ describe(@"ProductsViewController", ^{
             apiClient should have_received(@selector(fetchProductsWithCompletion:));
         });
 
-        it(@"should show a table view with products", ^{
+        it(@"should show a product names", ^{
             ProductCell *cell = controller.tableView.visibleCells.firstObject;
             cell.productNameLabel.text should equal(@"default name");
+        });
+
+        it(@"should show product images", ^{
+            NSURLConnection *connection = [[NSURLConnection connections] lastObject];
+            PSHKFakeHTTPURLResponse *response = [[PSHKFakeHTTPURLResponse alloc] initWithStatusCode:200
+                                                                                         andHeaders:@{}
+                                                                                        andBodyData:[NSData dataWithContentsOfFile:thumbnailPath]];
+            [connection receiveResponse:response];
+            ProductCell *cell = controller.tableView.visibleCells.firstObject;
             [cell.productImageView.image isEqualToByBytes:thumbnailImage] should be_truthy;
         });
     });

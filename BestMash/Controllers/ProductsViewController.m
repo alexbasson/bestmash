@@ -3,7 +3,7 @@
 #import "ProductsAPIClient.h"
 #import "Product.h"
 
-@interface ProductsViewController () <UITableViewDataSource>
+@interface ProductsViewController () <UITableViewDataSource, UITableViewDelegate>
 
 @property (nonatomic, strong) NSArray *products;
 @property (nonatomic, strong, readwrite) UITableView *tableView;
@@ -33,6 +33,7 @@
     }];
     self.tableView = [[UITableView alloc] initWithFrame:self.view.bounds];
     self.tableView.dataSource = self;
+    self.tableView.delegate = self;
     [self.tableView registerClass:[ProductCell class] forCellReuseIdentifier:@"ProductCell"];
     [self.view addSubview:self.tableView];
 }
@@ -55,6 +56,12 @@
                                cell.productImageView.image = [UIImage imageWithData:data];
                            }];
     return cell;
+}
+
+#pragma mark - <UITableViewDelegate>
+
+- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
+    return 52.0f;
 }
 
 @end
