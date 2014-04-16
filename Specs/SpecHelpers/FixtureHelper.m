@@ -1,5 +1,4 @@
 #import "FixtureHelper.h"
-#import "PSHKFixtures.h"
 
 @implementation FixtureHelper
 

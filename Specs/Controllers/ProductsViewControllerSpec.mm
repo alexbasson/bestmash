@@ -1,8 +1,5 @@
 #import "ProductsViewController.h"
 #import "ProductCell.h"
-#import "NSURLConnection+Spec.h"
-#import "PSHKFakeResponses.h"
-#import "PSHKFakeHTTPURLResponse.h"
 
 using namespace Cedar::Matchers;
 using namespace Cedar::Doubles;
