@@ -11,14 +11,17 @@ describe(@"Product", ^{
 
     beforeEach(^{
         dict = @{@"name": @"Product Name",
-                 @"thumbnailImage": @"a/thumbnail/url"
-                               };
+                 @"thumbnailImage": @"a/thumbnail/url",
+                 @"releaseDate": @"2014-04-15"
+                };
         product = [[Product alloc] initWithDictionary:dict];
     });
 
     it(@"should set the appropriate properties on the model", ^{
         product.name should equal(@"Product Name");
         product.thumbnailURL should equal([NSURL URLWithString:@"a/thumbnail/url"]);
+        NSDate *date = [NSDate dateWithTimeIntervalSince1970:1397520000];
+        product.releaseDate should equal(date);
     });
 
     describe(@"equality", ^{

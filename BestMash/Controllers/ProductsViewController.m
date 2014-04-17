@@ -51,12 +51,13 @@
 
     ProductCell *cell = (ProductCell *)[tableView dequeueReusableCellWithIdentifier:@"ProductCell" forIndexPath:indexPath];
     cell.productNameLabel.text = product.name;
-    NSURLRequest *requst = [NSURLRequest requestWithURL:product.thumbnailURL];
-    [NSURLConnection sendAsynchronousRequest:requst
+    NSURLRequest *request = [NSURLRequest requestWithURL:product.thumbnailURL];
+    [NSURLConnection sendAsynchronousRequest:request
                                        queue:[NSOperationQueue mainQueue]
                            completionHandler:^(NSURLResponse *response, NSData *data, NSError *connectionError) {
                                cell.productImageView.image = [UIImage imageWithData:data];
                            }];
+//    cell.releaseDateLabel.text = product.
     return cell;
 }
 

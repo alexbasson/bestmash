@@ -42,6 +42,11 @@ describe(@"ProductsViewController", ^{
             cell.productNameLabel.text should equal(@"default name");
         });
 
+        it(@"should show a release date", ^{
+            ProductCell *cell = controller.tableView.visibleCells.firstObject;
+            cell.releaseDateLabel.text should equal(@"April 15, 2014");
+        });
+
         it(@"should show product images", ^{
             NSURLConnection *connection = [[NSURLConnection connections] lastObject];
             PSHKFakeHTTPURLResponse *response = [[PSHKFakeHTTPURLResponse alloc] initWithStatusCode:200

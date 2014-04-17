@@ -8,5 +8,6 @@
 
 @property (nonatomic, strong, readonly) NSString *name;
 @property (nonatomic, strong, readonly) NSURL *thumbnailURL;
+@property (nonatomic, strong, readonly) NSDate *releaseDate;
 
 @end

@@ -3,6 +3,7 @@
 @interface Product ()
 @property (nonatomic, strong, readwrite) NSString *name;
 @property (nonatomic, strong, readwrite) NSURL *thumbnailURL;
+@property (nonatomic, strong, readwrite) NSDate *releaseDate;
 @end
 
 @implementation Product
@@ -19,6 +20,10 @@
     if (self = [super init]) {
         self.name = dict[@"name"];
         self.thumbnailURL = [NSURL URLWithString:dict[@"thumbnailImage"]];
+        NSDateFormatter *dateFormatter = [[NSDateFormatter alloc] init];
+        [dateFormatter setDateFormat:@"YYYY-MM-dd"];
+        [dateFormatter setTimeZone:[NSTimeZone timeZoneForSecondsFromGMT:0]];
+        self.releaseDate = [dateFormatter dateFromString:dict[@"releaseDate"]];
     }
     return self;
 }

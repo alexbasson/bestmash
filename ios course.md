@@ -11,6 +11,10 @@ Structure: Following the [iOS Bootcamp](https://docs.google.com/a/pivotallabs.co
  - Create project with Cedar and Pivotal Core Kit
  - Put table view on screen with fake data. Only show product name for now.
 
+### HW:
+ - Set up your machine at home and get a table view on screen.
+
+
 
 ## Day 2
 
@@ -22,6 +26,7 @@ Structure: Following the [iOS Bootcamp](https://docs.google.com/a/pivotallabs.co
  - Extract networking code out of the controller and into its own class
 
 
+
 ## Day 3
 
 ### In class:
@@ -29,4 +34,16 @@ Structure: Following the [iOS Bootcamp](https://docs.google.com/a/pivotallabs.co
  - Introduce Product model object
 
 ### HW:
- - Display the regular price in the table view.
+ - Display the release date in the table view. (Hint: NSDateFormatter)
+
+
+
+## Day 4
+
+### In class:
+ - Convert app to use storyboards
+
+### HW:
+
+
+
